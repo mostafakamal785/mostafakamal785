@@ -9,6 +9,10 @@ jobs:
   update-readme:
     name: Update Readme with Waka Stats
     runs-on: ubuntu-latest
+    # ==> السطران الجديدان هنا لمنح صلاحية الكتابة
+    permissions:
+      contents: write
+    # <== نهاية الإضافة
     steps:
       - uses: anmol098/waka-readme-stats@master
         with:
