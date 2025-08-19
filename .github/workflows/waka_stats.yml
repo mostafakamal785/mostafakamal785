@@ -1,13 +1,15 @@
 name: Waka Readme
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 */4 * * *'
+
 jobs:
   update-readme:
     name: Update Readme with Waka Stats
     runs-on: ubuntu-latest
-steps:
+    steps:
       - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
